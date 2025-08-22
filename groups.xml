@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+
+
+  <test thread-count="5" name="Test">
+       
+       <groups>
+       				
+       		<define  name="morning" >
+       					<include name="smoke"></include>
+       		</define>
+       		<define name="afternoon">
+       				<include name="smoke"></include>
+       				<include name="sanity"></include>
+       				<include name="regression"></include>
+       		</define>
+       		
+       		<define name="evening">
+       				<include name="sanity"></include>
+       		</define>
+       		
+       		<run>
+       					<include name="evening"></include>
+       		</run>
+       
+       </groups>
+  
+    <classes>
+      <class name="org.test.Class1"/>
+      <class name="org.test.Class2"/>
+      <class name="org.test.Class3"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
