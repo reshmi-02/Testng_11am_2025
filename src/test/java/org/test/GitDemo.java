@@ -1,6 +1,11 @@
 package org.test;
 
 public class GitDemo {
+
+	public void add(){
+
+		System.out.println("it is a add function");
+	}
 	
 	public static void main(String[] args) {
 		
